@@ -1,0 +1,20 @@
+.popup__close-button-error {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 15px;
+  min-height: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../../../images/close_button_black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
+  padding: 0;
+}
+
+.popup__close-button:hover {
+  opacity: .6;
+  transition: .5s;
+}

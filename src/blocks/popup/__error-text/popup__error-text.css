@@ -1,0 +1,7 @@
+.popup__error-text {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px;
+  text-align: center;
+  word-wrap: break-word;
+}

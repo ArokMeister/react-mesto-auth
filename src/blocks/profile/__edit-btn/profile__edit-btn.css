@@ -1,0 +1,22 @@
+.profile__edit-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  background-color: #000;
+  background-image: url(../../../images/pen_button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.profile__edit-btn:hover {
+  opacity: 0.6;
+  transition: .5s;
+}
+
+@media screen and (max-width: 550px) {
+  .profile__edit-btn {
+    width: 18px;
+    height: 18px;
+  }
+}

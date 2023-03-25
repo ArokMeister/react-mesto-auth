@@ -1,0 +1,18 @@
+.element__remove-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 19px;
+  background-image: url(../../../images/garbage_button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.element__remove-btn:hover {
+  opacity: .6;
+  transition: .5s ease-in-out;
+}

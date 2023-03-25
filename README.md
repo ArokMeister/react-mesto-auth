@@ -19,4 +19,4 @@
 - Реализовать лайв ленту фотокарточек пользователей, на которых есть подписка
 
 
-<a href="https://arokmeister.github.io/mesto-react/">Ссылка на проект</a>
+<a href="https://arokmeister.github.io/react-mesto-auth/">Ссылка на проект</a>

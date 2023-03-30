@@ -62,3 +62,13 @@
 @import url(../src/blocks/popup/__container-succes/popup__container-succes.css);
 @import url(../src/blocks/popup/__title-succes/popup__title-succes.css);
 @import url(../src/blocks/popup/__image-succes/popup__image-succes.css);
+
+@import url(../src/blocks/authform/form.css);
+@import url(../src/blocks/authform/__container/form__container.css);
+@import url(../src/blocks/authform/__btn/form__btn.css);
+@import url(../src/blocks/authform/__input/form__input.css);
+@import url(../src/blocks/authform/__link/form__link.css);
+@import url(../src/blocks/authform/__subtitle/form__subtitle.css);
+@import url(../src/blocks/authform/__title/form__title.css);
+
+@import url(../src/blocks/loader/loader.css);

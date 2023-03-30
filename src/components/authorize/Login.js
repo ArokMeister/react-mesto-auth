@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AuthorizeForm from "./AuthorizeForm";
-import style from './TitleAuth.module.css';
 
 function Login({ onLogin, loggedIn }) {
 
@@ -22,7 +21,7 @@ function Login({ onLogin, loggedIn }) {
 
   return (
     <>
-      <h1 className={style.title}>Вход</h1>
+      <h1 className="form__title">Вход</h1>
       <AuthorizeForm onChange={onChange} onSubmit={submit} values={values} btnText='Войти' />
     </>
 

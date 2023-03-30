@@ -1,4 +1,3 @@
-import style from './AuthorizeForm.module.css';
 import { useForm } from 'react-hook-form';
 
 function AuthorizeForm({ onSubmit, onChange, btnText, values }) {
@@ -6,10 +5,10 @@ function AuthorizeForm({ onSubmit, onChange, btnText, values }) {
   const { register, formState: { errors }, handleSubmit } = useForm({ mode: "onBlur" })
 
   return (
-    <div className={style.container}>
-      <form className={style.form} onSubmit={handleSubmit(onSubmit)} noValidate>
+    <div className="form__container">
+      <form className="form" onSubmit={handleSubmit(onSubmit)} noValidate>
         <input
-          className={style.form_input}
+          className="form__input"
           type='email'
           name='email'
           id='email'
@@ -27,7 +26,7 @@ function AuthorizeForm({ onSubmit, onChange, btnText, values }) {
         />
         <span className="popup__error">{errors?.email?.message}</span>
         <input
-          className={style.form_input}
+          className="form__input"
           type='password'
           name='password'
           id='password'
@@ -44,7 +43,7 @@ function AuthorizeForm({ onSubmit, onChange, btnText, values }) {
           })}
         />
         <span className="popup__error">{errors?.password?.message}</span>
-        <button className={style.form_btn} >{btnText}</button>
+        <button className="form__btn" >{btnText}</button>
       </form>
     </div>
   )

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import AuthorizeForm from "./AuthorizeForm";
-import style from './TitleAuth.module.css';
 
 function Register({ onRegister, loggedIn }) {
 
@@ -22,9 +21,9 @@ function Register({ onRegister, loggedIn }) {
 
   return (
     <>
-      <h1 className={style.title}>Регистрация</h1>
+      <h1 className="form__title">Регистрация</h1>
       <AuthorizeForm onChange={onChange} onSubmit={submit} values={values} btnText='Зарегистрироваться' />
-      <p className={style.subtitle}>Уже зарегистрированы? <Link to="/sign-in" className={style.subtitle_link}>Войти</Link> </p>
+      <p className="form__subtitle">Уже зарегистрированы? <Link to="/sign-in" className="form__link">Войти</Link> </p>
     </>
 
   )

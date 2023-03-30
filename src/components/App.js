@@ -26,7 +26,7 @@ function App() {
   const [acceptDeletePopup, setAcceptDeletePopup] = useState({ isOpen: false, card: null });
   const [selectedCard, setSelectedCard] = useState({ name: null, link: null, isOpen: false });
   const [error, setError] = useState({ errorMessage: '', isOpen: false });
-  const [succesPopup, setSuccesPopup] = useState({ errorMessage: '', isOpen: false });
+  const [infoToolTipStatus, setInfoToolTipStatus] = useState({ errorMessage: '', isOpen: false });
 
   const [cards, setCards] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
@@ -74,7 +74,7 @@ function App() {
     if (acceptDeletePopup) { setAcceptDeletePopup(!acceptDeletePopup) }
     if (selectedCard) { setSelectedCard(!selectedCard) }
     if (error) { setError({ ...error, isOpen: false }) }
-    if (succesPopup) { setSuccesPopup({...succesPopup, isOpen: false}) }
+    if (infoToolTipStatus) { setInfoToolTipStatus({...infoToolTipStatus, isOpen: false}) }
   }
 
   function handleCardDelete(card) {
@@ -130,15 +130,15 @@ function App() {
           navigate('/', { replace: true })
         }
       })
-      .catch(err => handleErrorMessage(err.message))
+      .catch(err => setInfoToolTipStatus({ errorMessage: err.message, isOpen: true }))
   }
 
   function handleRegister(email, password) {
     auth.register(email, password)
       .then(res => {
-        setSuccesPopup({ errorMessage: '', isOpen: true })
+        setInfoToolTipStatus({ errorMessage: '', isOpen: true })
       })
-      .catch(err => setSuccesPopup({ errorMessage: err.message, isOpen: true }))
+      .catch(err => setInfoToolTipStatus({ errorMessage: err.message, isOpen: true }))
   }
 
   function handleLogout() {
@@ -240,9 +240,9 @@ function App() {
       />
 
       <InfoTooltip 
-        isOpen={succesPopup.isOpen}
+        isOpen={infoToolTipStatus.isOpen}
         onClose={handleCloseAllPopups}
-        error={succesPopup.errorMessage}
+        error={infoToolTipStatus.errorMessage}
       />
       
     </CurrentUserContext.Provider>

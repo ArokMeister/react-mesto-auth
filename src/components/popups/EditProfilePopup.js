@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
 
-  const { register, setValue, formState: { errors }, handleSubmit, clearErrors } = useForm({ mode: "all" });
+  const { register, setValue, formState: { errors }, handleSubmit, clearErrors } = useForm({ mode: "onChange" });
 
   const currentUser = useContext(CurrentUserContext);
   const [userData, setUserData] = useState({ name: '', about: '' })
@@ -50,7 +50,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           }
         })}
       />
-      <span className="popup__error popup__error_visible" id="name-error">{errors?.name?.message}</span>
+      <span className="popup__error" id="name-error">{errors?.name?.message}</span>
       <input
         className="popup__input popup__input-job"
         id="job"
@@ -69,7 +69,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           }
         })}
       />
-      <span className="popup__error popup__error_visible" id="job-error">{errors?.about?.message}</span>
+      <span className="popup__error" id="job-error">{errors?.about?.message}</span>
     </PopupWithForm>
   )
 }

@@ -5,6 +5,9 @@
 
 @import url(../src/blocks/header/header.css);
 @import url(../src/blocks/header/__logo/header__logo.css);
+@import url(../src/blocks/header/__link/header__link.css);
+@import url(../src/blocks/header/__email/header__email.css);
+@import url(../src/blocks/header/__container/header__container.css);
 
 @import url(../src/blocks/profile/profile.css);
 @import url(../src/blocks/profile/__add-btn/profile__add-btn.css);
@@ -46,7 +49,6 @@
 @import url(../src/blocks/popup/__input/popup__input.css);
 @import url(../src/blocks/popup/__input/_type_error/popup__input_type_error.css);
 @import url(../src/blocks/popup/__error/popup__error.css);
-@import url(../src/blocks/popup/__error/_visible/popup__error_visible.css);
 @import url(../src/blocks/popup/__container-avatar/popup__container-avatar.css);
 @import url(../src/blocks/popup/__container-remove/popup__container_remove.css);
 @import url(../src/blocks/popup/__button-yes/popup__button-yes.css);
@@ -56,3 +58,7 @@
 @import url(../src/blocks/popup/__error-text/popup__error-text.css);
 @import url(../src/blocks/popup/__close-button-error/popup__close-button-error.css);
 @import url(../src/blocks/popup/_error/popup_error.css);
+@import url(../src/blocks/popup/__error-succes/popup__error-succes.css);
+@import url(../src/blocks/popup/__container-succes/popup__container-succes.css);
+@import url(../src/blocks/popup/__title-succes/popup__title-succes.css);
+@import url(../src/blocks/popup/__image-succes/popup__image-succes.css);

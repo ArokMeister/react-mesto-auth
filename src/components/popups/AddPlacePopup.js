@@ -20,9 +20,9 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   }
 
   useEffect(() => {
-    isOpen && setCardData({ name: "", link: "" })
-    isOpen && clearErrors()
-  }, [isOpen])
+    setCardData({ name: "", link: "" })
+    clearErrors()
+  }, [isOpen, clearErrors])
 
   return (
     <PopupWithForm
@@ -34,7 +34,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       onSubmit={handleSubmit(formSubmit)} >
       <input
         className="popup__input popup__input-place"
-        id="place"
+        id="placename"
         name="name"
         placeholder="Название места"
         autoComplete="off"
@@ -63,7 +63,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         {...register("link", {
           required: "Обязательное поле",
           pattern: {
-            value: /https?:\/\/(www\.)?[-\w@:%\.\+~#=]{1,256}\.[a-z0-9()]{1,6}\b([-\w()@:%\.\+~#=//?&]*)/i,
+            value: (/^((http|https):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9\\-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\\/])*)?/),
             message: "Введите URL"
           },
           onChange: handleChangeInput
@@ -71,7 +71,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         value={cardData.link}
       />
       <span className="popup__error popup__error_visible" id="url-error">{errors?.link?.message}</span>
-
     </PopupWithForm>
   )
 }

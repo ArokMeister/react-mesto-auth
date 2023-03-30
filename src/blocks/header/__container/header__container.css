@@ -1,0 +1,15 @@
+.header__container {
+  display: flex;
+}
+
+@media screen and (max-width: 968px) {
+  .header__container {
+    margin-right: 44px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__container {
+    margin-right: 27px;
+  }
+}

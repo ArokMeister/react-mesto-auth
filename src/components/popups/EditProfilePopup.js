@@ -15,7 +15,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
     setValue("name", userData.name)
     setValue("about", userData.about)
     clearErrors()
-  }, [currentUser, isOpen])
+  }, [currentUser, isOpen, clearErrors, setValue, userData.about, userData.name])
 
   function formSubmit(user) {
     onUpdateUser({
@@ -61,7 +61,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           required: "Обязательное поле",
           minLength: {
             value: 2,
-            message: "Минимальная длина поля: 2 символа"
+            message: "Минимальная длина поля: 2 символа",
           },
           maxLength: {
             value: 200,
